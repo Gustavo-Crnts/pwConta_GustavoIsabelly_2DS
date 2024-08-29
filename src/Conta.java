@@ -3,9 +3,14 @@ public class Conta {
     private double saldo;
     private String tipo;
 
-    public Conta(double saldoInicial, String tipo) {
-        this.saldo = saldoInicial;
-        this.tipo = tipo != null ? tipo : "Corrente";
+public Conta(double valorInicial) {
+        this.saldo = valorInicial;
+        this.tipo = "Corrente";
+    }
+
+    public Conta(double valorInicial, String tipo) {
+        this.saldo = valorInicial;
+        this.tipo = tipo;
     }
 
     public boolean depositar(double valor) {
